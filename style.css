@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(15, 13, 13);
+}
+::selection{
+    background:none;
+    color: greenyellow;
+}
+h1{
+    margin-bottom: 30px;
+    color: transparent;
+    -webkit-text-stroke:2px white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 60px;
+}
+.container{
+    margin: 0 auto;
+    width: 1200px;
+}
+figure{
+    position: relative;
+    height:500px;
+    width:350px;
+    margin: 20px;
+    color: white;
+}
+figure img{
+    border-radius: 20px;
+    height: 100%;
+    max-width: 100%;
+    transition: transform 0.3s ease-in-out filter 0.3s ease-in-out;
+    filter: grayscale(1);
+    object-fit: cover;
+    max-height: 100%;
+    width: 100%;
+}
+figure:hover{
+
+    transition: 0.4s;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgb(126, 116, 116);
+    scale: 1.04;
+
+}
+figure:hover figcaption{
+    scale: 1.04;
+    opacity: 1;
+}
+figure:hover img{
+    transition:transform 0.3s ease-in-out filter 0.3s ease-in-out;
+    filter: none;
+}
+figure img:hover{
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    filter: none;
+}
+
+.gallery{
+    margin: 0 auto;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    overflow: hidden;
+    display: flex;
+}
+::-webkit-scrollbar{
+    width: 7px;
+    background-color: white;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(121, 112, 112);
+}
+figcaption{
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    bottom: 50%;
+    left: 25%;
+    width: 100%;
+    font-size: 50px;
+    color: greenyellow;
+    opacity: 0;
+}
